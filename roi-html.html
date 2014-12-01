@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>ROI Calculator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+<!--
+    <link rel="stylesheet" href="styles/main.css">
+-->
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <!--Change for production-->
+    <!--Change for development-->
+
+   <!-- <script src="scripts/modernizr.js"></script>-->
+    <!-- endbuild -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.interactjs.io/interact-1.1.2.min.js"></script>
+    <script src="roi-js.js"></script>
+    <link rel="stylesheet"
+      type="text/css"
+      href="roi-css.css"
+/>
+    <!--link rel="stylesheet"
+      type="text/css"
+      href="is-css-2014.css"
+/-->
+</head>
+
+<body>
+    <div class="container-new-nav">
+    </div>
+        <div class="container-update section container">
+        <div class="row">
+            <div class="col-xs-12 ROI-heading">
+                <h1>Sales ROI Calculator</h1>
+                <p>This is the Sales ROI Calculator. Here you can see where your sales team is currently at and where you want your sales team to be. InsideSales.com can get you there!</p>
+            </div>
+            <div class="col-md-4">
+                 <div class="metric-box">
+                    <div class="metric-heading row">
+                        <div class="col-xs-12">
+                            <h2>Daily Dials / Rep</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-xs-9">
+                                <div class="row current-new-container">
+                                    <div class="col-xs-12">
+                                        <h3 class="current-new-heading">Current</h3>
+                                        <p id="current-value" class="current-new-value"><span id="cMetricDDR"></span></p>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <h3 class="current-new-heading">New</h3>
+                                        <p id="new-value" class="current-new-value green"><span id="nMetricDDR"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 slider" onmouseover="removeTransition();">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <a onclick="plusOneDD();">
+                                            <span class="glyphicon-plus"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 slider-container">
+                                        <div id="dailyDialsSlider" class="slide-up-down sliding-transition">
+                                            <a>
+                                                <span class="slider-circle">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <a onclick="minusOneDD();">
+                                             <span class="glyphicon-minus"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col-xs-12 revenue-increase-container">
+                                <h3>Revenue Increase</h3>
+                                <p class="revenue-increase-percentage green">+<span class="revIncreaseP"></span>%</p>
+                                <p id="monthly-increase-revenue" class="revenue-increase-monvsan m-p-decrease">+$<span class="monthlyRI"></span> monthly</p>
+                                <p id="annual-increase-revenue" class="revenue-increase-monvsan">+$<span class="annualRI"></span> annually</p>
+                            </div> <!-- end revenue label row -->
+                    </div> <!-- end container col-12 -->
+                </div> <!-- end container row -->
+            </div> <!-- end metric box -->
+            </div>
+            <div class="col-md-4">
+                 <div class="metric-box">
+                    <div class="metric-heading row">
+                        <div class="col-xs-12">
+                            <h2>Dial : Contact %</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-xs-9">
+                                <div class="row current-new-container">
+                                    <div class="col-xs-12">
+                                        <h3 class="current-new-heading">Current</h3>
+                                        <p id="current-value" class="current-new-value"><span id="cMetricDC"></span></p>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <h3 class="current-new-heading">New</h3>
+                                        <p id="new-value" class="current-new-value green"><span id="nMetricDC"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 slider" onmouseover="removeTransition();">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <a onclick="plusOneCP();">
+                                             <span class="glyphicon-plus"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 slider-container">
+                                        <div id="contactSlider" class="slide-up-down sliding-transition">
+                                            <a>
+                                                <span class="slider-circle">
+                                                </span>
+                                            </a>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                         <a onclick="minusOneCP();">
+                                              <span class="glyphicon-minus"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col-xs-12 revenue-increase-container">
+                                <h3>Revenue Increase</h3>
+                                <p class="revenue-increase-percentage green">+<span class="revIncreaseP"></span>%</p>
+                                <p id="monthly-increase-revenue" class="revenue-increase-monvsan m-p-decrease">+$<span class="monthlyRI"></span> monthly</p>
+                                <p id="annual-increase-revenue" class="revenue-increase-monvsan">+$<span class="annualRI"></span> annually</p>
+                            </div> <!-- end revenue label row -->
+                    </div> <!-- end container col-12 -->
+                </div> <!-- end container row -->
+            </div> <!-- end metric box -->
+            </div>
+            <div class="col-md-4">
+                 <div class="metric-box">
+                    <div class="metric-heading row">
+                        <div class="col-xs-12">
+                            <h2>Close Rate %</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-xs-9">
+                                <div class="row current-new-container">
+                                    <div class="col-xs-12">
+                                        <h3 class="current-new-heading">Current</h3>
+                                        <p id="current-value" class="current-new-value"><span id="cMetricCR"></span></p>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <h3 class="current-new-heading">New</h3>
+                                        <p id="new-value" class="current-new-value green"><span id="nMetricCR"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3 slider" onmouseover="removeTransition();">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <a onclick="plusOneCR();">
+                                            <span class="glyphicon-plus"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 slider-container">
+                                        <div id="closeRateSlider" class="slide-up-down sliding-transition">
+                                            <a>
+                                                <span class="slider-circle">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                          <a onclick="minusOneCR();">
+                                              <span class="glyphicon-minus"></span>
+                                          </a>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col-xs-12 revenue-increase-container" style="
+    /* margin: 0em; */
+">
+                                <h3>Revenue Increase</h3>
+                                <p class="revenue-increase-percentage green">+<span class="revIncreaseP"></span>%</p>
+                                <p id="monthly-increase-revenue" class="revenue-increase-monvsan m-p-decrease">+$<span class="monthlyRI"></span> monthly</p>
+                                <p id="annual-increase-revenue" class="revenue-increase-monvsan">+$<span class="annualRI"></span> annually</p>
+                            </div> <!-- end revenue label row -->
+                    </div> <!-- end container col-12 -->
+                </div> <!-- end container row -->
+            </div> <!-- end metric box -->
+            </div>
+        </div> 
+    </div>
+
+

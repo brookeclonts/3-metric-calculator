@@ -1,0 +1,891 @@
+/* ---------- SMACSS Base Rules ---------- */
+
+body, h1, h2, h3, h4, h5, h6, p, li, div, input, textarea, a {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    color: #3e4546;
+}
+body {
+    background-color: #ededed;
+}
+a {
+    color: #07a2bd;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+p, li, a.pure-button, .pure-button {
+    font-size: .9375em;
+}
+a {
+    font-size: 1em;
+}
+img {
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top:0;
+    margin-bottom: 0;
+}
+h1, .h1-style {
+    font-size: 2.5em;
+    line-height: 1.17em;
+}
+h2, .h2-style {
+    font-size: 1.875em; /* 30px */
+}
+h3, .h3-style {
+    font-size: 1.25em; /* 20px */
+}
+h4, .h4-style {
+    font-size: .9375em; /* 15px */
+}
+h5, .h5-style {}
+h6, .h6-style {
+    font-size: 1em;
+}
+ul {
+    padding-left: 0;
+}
+ul li {
+    list-style-type: none;
+}
+ul.bullet-list {
+    margin-left: 1em;
+}
+
+ul.bullet-list li {
+    list-style-type: disc;
+}
+.pure-button.button-red, .pure-button.button-blue {
+    color: #ffffff;
+    width: 10.7em;
+}
+.pure-button {
+    box-shadow: 0em .25em .125em rgba(0, 0, 0, 0.2);
+    border-radius: .25em;
+    font-weight: 400;
+    padding: .22em 0 .4em 0;
+    width: 5.7em;
+}
+.button-red:hover, .button-blue:hover, .pure-button:hover {
+    box-shadow: 0em .18em .125em rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+.button-red {
+    background: #e8310e;
+}
+.button-blue {
+    background: #06b5d3;
+}
+.new-button {
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    transition: .1s linear box-shadow;
+    text-decoration: none;
+    border: 0 rgba(0,0,0,0);
+    box-shadow: 0em 3.75px 1.875px rgba(0, 0, 0, 0.2);
+    border-radius: 3.75px;
+    font-weight: 400;
+    padding: 3.3px 0 6px 0;
+    font-size: 15px;
+    /*width: 160.5px;*/
+    width: 174px;
+    margin-bottom: 15px;
+}
+.new-button:hover {
+    box-shadow: 0 2.7px 1.875px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(transparent),color-stop(40%,rgba(0,0,0,.05)),to(rgba(0,0,0,.1)));
+    background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+    background-image: -moz-linear-gradient(top,rgba(0,0,0,.05) 0,rgba(0,0,0,.1));
+    background-image: -ms-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+    background-image: -o-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+    background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+}
+.new-red-button {
+    background-color: #e8310e;
+    color: #ffffff;
+}
+.new-blue-button {
+    color: #ffffff;
+    background: #06b5d3;
+}
+
+#highVelocityMetricsButton {
+    height: 132px;
+    background-image: url('/images/banner-12-high-velocity-metrics-173-blue.png');
+}
+#highVelocityMetricsButton {
+    position: relative;
+    top: 0px;
+    left: 1px;
+    width: 174px;
+    z-index: 5;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 5px 0px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: right;
+}
+.color-white {
+    color: #ffffff;
+}
+
+
+/* ---------- SMACSS Layout Rules ---------- */
+
+.pure-g-r {
+    margin: 0 auto;
+}
+.pure-g-r > div, .pure-g-r {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.l-center-left {
+    text-align: center;
+}
+.l-center-right {
+    text-align: center;
+}
+.l-margin-0 {
+    margin: 0;
+}
+.l-bg-gray {
+    background: #ececec;
+}
+.l-divider {
+    padding: 3.3125em 0 2.3125em 0;
+    border-top: 1px solid #dedede;
+}
+
+/* ---------- SMACSS Module Rules ---------- */
+
+.container-update {
+    background-color: #FCFCFC;
+}
+.container-ip-info {
+    padding: 3.3125em 1.25em;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+li.nav-header {
+    font-size: 1.25em;
+}
+.container-new-nav, .container-update, .container-ip-info {
+    margin: 0 auto;
+}
+.section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 3.3125em 1.25em;
+}
+.section-banner h4,
+.section-banner .h4-style,
+.section-banner-mobile .h4-style,
+.section-product-features h4,
+.section-product-features h4 a,
+.section-cta h4,
+.section-product-key-feature h4 {
+    font-weight:700;
+}
+.section-product-features p {
+    margin-top: 0px;
+}
+div.section-banner-mobile {
+    padding-top: 3.3125em;
+}
+.section-banner h2 {
+    margin-bottom: 0;
+}
+.section-banner .h4-style:first-of-type, .section-banner-mobile .h4-style:first-of-type {
+    margin-top: 3.125em;
+}
+.section-banner-mobile h1, .section-banner-mobile .h4-style, .section-banner-mobile p {
+    padding-right: 1.25em;
+}
+.section-banner p {
+    margin-top: 0;
+    text-align: left;
+}
+.section-banner-mobile p {
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+.section.section-video {
+    background-image: url('http://static.insidesales.com/assets/images/images-video-still-c.jpg');
+    background-size: cover;
+    padding-top: 0px;
+    position: relative;
+    border-top: 0.3125em solid #e8310e;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.section-video-play {
+    text-align: center;
+    position: relative;
+    top: 38%;
+}
+.section-video-play p {
+    color: #ffffff;
+    font-size: 1.375em;
+    margin: 0;
+    margin-top: .125em;
+}
+.section-video-play img {
+    width: 3.5em;
+}
+.section-pillars h2 {
+    font-size: 1.5625em;
+    margin:0;
+}
+.section-pillars .pure-u-1-2, .section-product-features .pure-u-1-2 {
+    margin-bottom: 2.25em;
+}
+.section-cta .pure-u-1-3 {
+    margin-bottom: 5em;
+    padding-right: 1em;
+}
+.section-cta .pure-u-1-3:last-child {
+    margin-bottom: 0;
+    padding-right: 0;
+}
+.section-cta {
+    background-color: #434b4d;
+    padding-bottom: 2.75em;
+    padding: 5em 1.25em;
+}
+.section-cta .phone-number a {
+    font-size: 1.5625em;
+    color: #ffffff;
+    font-weight: 300;
+}
+phone-number a:hover {
+    text-decoration: none;
+}
+.section-cta h4, .section-cta h5, .section-cta p {
+    color: #ffffff;
+}
+.section-featured-container {
+    margin-bottom: 3.75em;
+    display:inline-block;
+}
+.section-featured-container:last-child {
+    margin-bottom: 0;
+}
+.section-featured-image {
+    margin-bottom: 1em;
+}
+.section-product-key-feature h2 {
+    margin-bottom: 1.125em;
+}
+.section-product-key-feature p {
+    margin-top: 0;
+}
+.key-feature-copy {
+    margin-top: 3.3125em;
+}
+.section-footer ul {
+    margin:0;
+}
+.section-footer h3 {
+    margin-top:0;
+    margin-bottom:.5em;
+}
+div.pure-u-1.footer-nav {
+    border-top: 0;
+    margin-top: 0;
+    padding: 3.3125em 0;
+}
+.footer-searches {
+    display: none;
+}
+.footer-links a {
+    font-size:.9375em;
+}
+.footer-all-products .column {
+    float: left;
+    width: 50%;
+}
+.footer-searches a, .footer-nav .footer-nav-primary a, .footer-nav p {
+    font-size: .875em;
+    color: #3e4546;
+}
+.footer-nav-primary li, .footer-nav-secondary li {
+    float:left;
+}
+.footer-nav-secondary {
+    color: #07a2bd;
+    padding: 2em 0;
+    clear: left;
+}
+.footer-nav p {
+    clear: left;
+}
+.footer-nav p:first-of-type {
+    padding-top: 2em;
+}
+.logo-salesforce-partner {
+    text-align: center;
+    margin-left: -.25em;
+}
+.logo-social-follow {
+    text-align: center;
+    padding: 2em 0;
+}
+.logo-social-follow a {
+    margin-right: 1.6875em;
+}
+.logo-social-follow img {
+    height: 17px;
+    width: auto;
+}
+.truste {
+    width: 143px;
+    height: 45px;
+    margin: 0 auto;
+}
+.banner-hero-image {
+    text-align: right;
+}
+div.banner-hero-image-full {
+    display:none;
+}
+.modal {
+    background-color: #FCFCFC;
+    width: 300px;
+    margin-left: -150px;
+
+}
+.modal.fade.in {
+    top: 8%;
+}
+a.modal-open:hover {
+    text-decoration: none;
+}
+.modal-video-container {
+    padding-top: 0px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 1.25em 0 1.5em 0;
+}
+.frameVideo {
+    position: absolute;
+    left: -50%;
+    margin-left: 50%;
+}
+.modal-close-button {
+    margin-right: .25em;
+}
+h2.modal-label {
+    text-align: center;
+    margin: 0 .875em .875em .875em;
+}
+.testimonial-heading{
+    padding-bottom: 0.5em;
+}
+h4.testimonial-name {
+    font-size: 1.125em;
+    margin-top:.25em;
+}
+.testimonial-title {
+    font-style:italic;
+    margin-top:0;
+}
+.testimonial-play-video {
+    margin-top:1.25em;
+}
+.testimonial-secondary-container {
+    margin-top: 2em;
+}
+.testimonial-secondary-container p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: .875em;
+}
+.section-testimonial {
+    text-align: center;
+}
+.testimonial-logos {
+    background-image: url('/images/customer-logo-bar-color-300.png');
+    height: 80px;
+    background-repeat: no-repeat;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: -20px;
+}
+ul[class*='column-footer-'] {
+    padding-bottom: .5em;
+    margin-top: 0;
+}
+.footer-links, .footer-copyright {
+    padding-bottom: 3.3125em;
+}
+.tm {
+    font-size: .5em;
+    vertical-align: .6875em;
+}
+.careers-form {
+    padding-bottom: 1.875em;
+}
+
+.careers-form #resumeLabel {
+    margin-top: 1.375em;
+    margin-bottom: .75em;
+}
+
+.careers-form .form-button {
+    margin-top: 1.375em;
+}
+.key-feature-list li{
+    margin-top: 20px;
+}
+
+/*-----------Tab Treatment Area-----------*/
+.neural-tab-wrapper{
+    margin-top:1.125em;
+}
+.neural-tab{
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    float: left;
+}
+.neural-tab h2{
+    margin-bottom: 0;
+}
+.neural-tab.active{
+    background-color: #ececec;
+}
+.neural-tab-page{
+    padding:20px;
+}
+.neuralytics-cta img{
+    width: 70%;
+}
+
+
+/* ---------- SMACSS State Rules ---------- */
+
+.is-hidden {
+    display: none;
+}
+.hide-for-mobile {
+    display: none;
+}
+.hide-for-tablet-down {
+    display: none;
+}
+.hide-for-tablet-up {
+    display: inline-block;
+}
+.modal.fade {
+    transition-delay: 0s, 0s;
+    -webkit-transition-delay: 0s, 0s;
+
+    transition-duration: 0.3s, 0.3s;
+    -webkit-transition-duration: 0.3s, 0.3s;
+
+    transition-property: opacity, top;
+    -webkit-transition-property: opacity, top;
+
+    transition-timing-function: linear, ease-out;
+    -webkit-transition-timing-function: linear, ease-out;
+}
+
+/*--------- Mobile Only Styles (max-width: 480px) ------------*/
+@media only screen and (max-width:30em) {
+    .c-partner-img-container{
+        text-align: center;
+        margin: auto;
+    }
+    .parallax {
+        background-position: 50%!important;
+    }
+    .section-video-play {
+        top: 31%;
+    }
+    .section.section-video {
+        height:250px;
+    }
+}
+/* ---------- Start Small Tablet Styles - Generally Mirror Mobile (481px to 767px) ------------------ */
+@media only screen and (min-width:30.0625em) and (max-width:47.9375em) {
+    .c-partner-img-container{
+        text-align: center;
+        margin: auto;
+        display: block;
+    }
+    .c-partner-img-container img {
+        max-width: 25em;
+    }
+    .bannerRightButton {
+        margin-left: .5em;
+    }
+    .l-center-left {
+        text-align: center;
+    }
+    .l-center-right {
+        text-align: center;
+    }
+    .hide-for-mobile {
+        display: none;
+    }
+    .hide-for-tablet-down {
+        display: none;
+    }
+    .hide-for-tablet-up {
+        display: inline-block;
+    }
+    .modal {
+        margin-left: -240px;
+        width: 480px;
+    }
+    .section-featured-image {
+        float: left;
+        clear: left;
+        padding-right: 3.75em;
+        margin-bottom: 7em;
+    }
+    .hide-for-mobile-h, .hide-for-small-tablet {
+        display: none;
+    }
+    div.banner-hero-image-full {
+        height: 19.5em;
+        width: 44.125em;
+        background-image: url('http://static.insidesales.com/assets/images/powerdialer-laptop-full2-c.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: inline-block;
+    }
+    .column-footer {
+        float: left;
+        padding-right: 1.5em;
+    }
+    .column-footer:last-of-type {
+        padding-right: 0;
+    }
+    .testimonial-logos {
+        background-image: url('/images/customer-logo-bar-color-300.png');
+        height: 80px;
+        width: 300px;
+    }
+    .section.section-video {
+        height:350px;
+    }
+}
+
+/* ---------- Start Standard Tablet Styles - Generally Mirror Desktop (768px to 1023px) ------------------ */
+@media only screen and (min-width:48em) and (max-width:63.9375em) {
+    img.section.c-partner-logo {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .bannerRightButton {
+        margin-left: .5em;
+    }
+    .l-center-left {
+        text-align: left;
+    }
+    .l-center-right {
+        text-align: right;
+    }
+    .l-col-left {
+        padding-right: 1.5625em;
+    }
+    .l-col-right {
+        padding-left: 1.5625em;
+    }
+    .hide-for-mobile {
+        display: inline-block;
+    }
+    .hide-for-tablet-down {
+        display: none;
+    }
+    .hide-for-tablet-up {
+        display: none;
+    }
+    .section-banner-mobile .pure-g-r img {
+        max-width: 22em;
+    }
+    .section-banner .h4-style:first-of-type {
+        margin-top: 1.125em;
+    }
+    .section-video-play img {
+        width: auto;
+    }
+    .section-featured-image {
+        float: left;
+        clear: left;
+        padding-right: 3.75em;
+    }
+    .pure-u-1-2.product-features-bottom {
+        margin-bottom:0;
+    }
+    div.section-banner {
+        padding-right: 0;
+        padding-top: 3.3125em;
+    }
+    .section-banner .pure-g-r img, .section-banner-mobile .pure-g-r img {
+        max-width: 100%;
+    }
+    .modal {
+        margin-left: -280px;
+        width: 560px;
+    }
+
+    .column-footer {
+        float: left;
+        padding-right: 1.5em;
+    }
+    .column-footer:last-of-type {
+        padding-right: 0;
+    }
+    .section-banner h2, .section-offer h2 {
+        margin-bottom: 1.5em;
+    }
+    .testimonial-image {
+        float: left;
+        margin-right: 1.875em;
+        cursor: pointer;
+    }
+    .testimonial-logos {
+        background-image: url('/images/customer-logo-bar-color-638.png');
+        height: 45px;
+        width: 638px;
+    }
+    .section-pillars .pure-u-1-2{
+        margin-bottom: .125em;
+    }
+    .pillar-icon {
+        float: left;
+        margin-right: .875em;
+    }
+    .pillar-copy {
+        float: left;
+        max-width: 17.375em; /* 278px */
+    }
+    .section.section-video {
+        height:400px;
+    }
+}
+
+/* ---------- Start Desktop Styles (min-width: 1024px)------------------ */
+@media only screen and (min-width: 64em) {
+    img.section.c-partner-logo {
+        padding-top: 0;
+        padding-bottom: 0;
+        /*position: absolute;
+        z-index: 2;
+        top: 31.7em;
+        left: 49.5em;
+        max-width: 26%;*/
+        
+    }
+    .bannerRightButton {
+        margin-left: .5em;
+    }
+    .section.section-video {
+        height:400px;
+    }
+    h1, .h1-style {
+        line-height: 1.25em;
+        /*font-size: 2.8em;*/
+        font-size: 2.7em;
+    }
+    .l-center-left {
+        text-align: left;
+    }
+    .l-center-right {
+        text-align: right;
+    }
+    .l-col-left {
+        padding-right: 1.5625em;
+    }
+    .l-col-right {
+        padding-left: 1.5625em;
+    }
+    .hide-for-mobile {
+        display: inline-block;
+    }
+    .hide-for-tablet-down {
+        display: inline-block;
+    }
+    .hide-for-tablet-up {
+        display: none;
+    }
+    .container-update, .container-new-nav, .container-ip-info {
+        max-width: 58.75em;
+        padding: 0;
+        box-shadow: .125em 0em .5em 0em rgba(0, 0, 0, 0.2), -.125em 0em .5em 0em rgba(0, 0, 0, 0.2);
+    }
+    .container-ip-info {
+        box-shadow: none;
+
+        padding:3.3125em 0;
+    }
+    .column-footer {
+        float: left;
+        padding-right: 3.5em;
+    }
+    .column-footer:last-of-type {
+        padding-right: 0;
+    }
+    .modal {
+        margin-left: -280px;
+        width: 560px;
+    }
+    .section {
+        padding: 3.3125em 4.375em;
+    }
+    div.section-banner {
+        padding-right: 0;
+    }
+    .section-banner h2 {
+        margin-bottom: 1.5em;
+    }
+    .section-banner .h4-style:first-of-type {
+        margin-top: 1.125em;
+    }
+    .section-banner .pure-g-r img, .section-banner-mobile .pure-g-r img {
+        max-width: 100%;
+    }
+    .section-video-play {
+        top: 42%;
+    }
+    .section-video-play p {
+        color: #ffffff;
+        font-size: 1.75em;
+        margin: 0;
+        margin-top: .125em;
+    }
+    .section-video-play img {
+        width: auto;
+    }
+    .section-pillars {
+        padding-left: 6.5em;
+    }
+    .pillar-icon {
+        float: left;
+        margin-right: .875em;
+    }
+    .pillar-copy {
+        float: left;
+        max-width: 17.375em; /* 278px */
+    }
+    .pure-u-1-2.product-features-bottom {
+        margin-bottom:0;
+    }
+
+    .section-cta {
+        padding-top: 1.875em 6em 2.75em 4.375em;
+    }
+    .section-cta .pure-u-1-3 {
+        padding-right: 4em;
+        margin-bottom: 0;
+    }
+    .section-cta .pure-u-1-3:last-child {
+        padding-right: 0;
+        margin-bottom: auto;
+    }
+    .section-featured {
+        padding-top: 2.3125em;
+    }
+    .section-featured-image {
+        float: left;
+        clear: left;
+        padding-right: 3.75em;
+    }
+    .testimonial-heading{
+        padding-bottom: 0.5em;
+    }
+    .testimonial-image {
+        float: left;
+        margin-right: 1.875em;
+        cursor: pointer;
+    }
+    h4.testimonial-name {
+        font-size: 1.125em;
+        margin-top: auto;
+    }
+    .testimonial-title {
+        font-style:italic;
+        margin-top:0;
+    }
+    .testimonial-play-video {
+        margin-top:1.25em;
+    }
+    .testimonial-secondary-container {
+        margin-top:0;
+    }
+    .testimonial-secondary-container img {
+        float: left;
+        clear: left;
+        margin-bottom: .585em;
+        margin-right: .9375em;
+    }
+    .testimonial-secondary-container p {
+        float: left;
+        margin-top: 2.0625em;
+    }
+    .testimonial-logos {
+        background-image: url('/images/customers-8-logo-bar-color-638.png');
+        height: 45px;
+        width: 638px;
+    }
+    .footer-all-products {
+        padding-top:0;
+    }
+    .footer-searches {
+        display: none;
+    }
+    .footer-all-products .column, .footer-searches .column {
+        float:left;
+        width:25%;
+    }
+    .logo-salesforce-partner {
+        text-align: left;
+        margin-left: 0em;
+    }
+    .logo-social-follow {
+        padding: 1em 0;
+    }
+    .truste {
+        float: right;
+    }
+    .key-feature-copy {
+        margin-top: 4.25em;
+    }
+    .key-feature-copy-nueralVeiw{
+        margin-top: 0px;
+    }
+    .section-pillars .pure-u-1-2{
+        margin-bottom: .125em;
+    }
+    /*-----------Vertically Center Rows------------*/
+    .fh{
+        display: table;
+        min-height: 200px;
+    }
+    .vb{
+        display:table-cell;
+        vertical-align: middle;
+    }
+}

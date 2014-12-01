@@ -1,0 +1,220 @@
+
+/* HEADING AND BODY TO MATCH PURE ON OTHER PAGES */
+        .ROI-heading p{
+            margin: 1em 0 2em 0;
+        }
+        .ROI-heading h1{
+            line-height: 1.25em;
+            font-size: 2.7em;
+            font-family: "Open Sans", Arial, sans-serif;
+            font-weight: 300;
+            color: #3e4546;
+            margin-top:0;
+        }
+        body{
+            font-size:16px;
+            background-color: #ededed;
+        }
+/* SLIDER */
+        .slider .row {
+            height: 2.5em;
+            margin: 0;
+        }
+        .current-new-container .col-xs-12:nth-child(1) {
+            margin-top: 0;
+            margin-bottom: 0;
+            
+        }
+        .slider .row:nth-child(2) {
+            height: 14em;
+            background-color: #9ED64C;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            position:relative;
+        }        
+        .current-value{
+            color:#636466;
+        }
+        span.slider-circle {
+            /*display:none;*/
+            height: 1.5em;
+            width: 1.5em;
+            background-color: white;
+            border-radius: 100%;
+            position: absolute;
+            border: solid #636466 .4em;
+            bottom:-1em;
+            left:.75em;
+        }
+        /* this transition applies to slide-up-down div*/
+        .sliding-transition{
+            -moz-transition-property: height;
+            -moz-transition-duration: 1.5s;
+            -moz-transition-timing-function: ease-out;
+            -moz-transition-delay: .5s;
+            -webkit-transition-property: height;
+            -webkit-transition-duration: 1.5s;
+            -webkit-transition-timing-function: ease-out;
+            -webkit-transition-delay: .5s;
+            /* Standard syntax */
+            transition-property: height;
+            transition-duration: 1.5s;
+            transition-timing-function: ease-out;
+            transition-delay: .5s;
+        }
+        .slide-up-down {
+            box-sizing:initial;
+            width: 100%;
+            background-color: white;
+            height:100%;
+            padding: 0;
+            margin: 0;
+            border-bottom:solid #636466 .4em;
+            position:relative;
+        }
+        .col-xs-12.slider-container {
+            height:100%;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            background-color: #9ED64C;
+        }
+/* GLYPHICONS */
+        .col-xs-12 a {
+	    text-decoration:none;
+        }
+        .slider .col-xs-12{
+            padding:0;
+            width:100%;
+            text-align:center;
+        }
+        .glyphicon-plus, .glyphicon-minus{
+            color:white;
+            font-weight:800;
+            font-size:2em;
+            text-align:center;
+            
+        }
+/* FONT/TEXT */ 
+        h3.current-new-heading {
+            color:#636466;
+            text-transform: uppercase;
+            font-size: 1.4em;
+            text-align: center;
+            font-weight: 100;
+            margin-bottom: 0;
+            letter-spacing: 0.7px;
+        }
+        .metric-box h2 {
+            margin-bottom: .75em;
+            color: white;
+            text-transform: uppercase;
+            font-size: 1.4em;
+            text-align: center;
+            margin-top: 0;
+            font-weight: 600;
+        }
+        .revenue-increase-container h3 {
+            color:#636466;
+            text-align: center;
+            font-size: 1.15em;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            font-weight: 300;
+        }
+        p.revenue-increase-monvsan {
+            font-weight: 600;
+            font-size: .9em;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color:#636466;
+        }
+        .current-new-value {
+            font-weight: 800;
+            text-align: center;
+            font-size: 4em;
+            color: #636466;
+        }
+        .green {
+            color: #9ED64C;
+        }
+
+/* METRIC BOX CSS */
+        .col-md-4 {
+            text-align: center;
+        }
+        .current-new-container .col-xs-12 {
+            height: 10em;
+            background-color: white;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        .col-xs-12.revenue-increase-container {
+            background-color: white;
+            text-align: center;
+        }
+
+        p.revenue-increase-percentage {
+            font-weight: 800;
+            font-size: 3em;
+        }
+
+        .col-xs-3.slider {
+            padding: 0 0 0 1em;
+        }
+
+        .m-p-none {
+            margin-bottom: .125em;
+            padding-bottom: 0;
+        }
+
+        .m-p-decrease {
+            margin-bottom: .125em;
+            padding: 0;
+        }
+        .metric-box{
+                padding: 1em;
+                background-color: #636466;
+                display: inline-block;
+                margin-bottom: 1em;
+                max-width:20em;
+        }
+        .metric-box row{padding:1em;}
+
+/* RESPONSIVE CSS */
+
+        /* Small devices (mobile fix) */
+         @media only screen and (min-width:20em) and (max-width:25em){ 
+        /*specific to moving circle*/
+            span.slider-circle {
+                left:0.8em;
+            }
+        }
+        /*small devices*/
+        @media only screen and (min-width:25em) and (max-width:63.9375em){ 
+        span.slider-circle{left:1em;}
+        .revenue-increase-container h3 {
+            color:#636466;
+            text-align: center;
+        }
+        .row {
+            margin-top: .5em; 
+        }
+}
+
+        /* Large devices (large desktops, 1200px and up) */
+        @media (min-width: 64em) { 
+            span.slider-circle {
+                display:inline-block;
+            }
+            .section{
+                padding: 3.3125em 4.375em;
+            }
+            .metric-box h2{
+                letter-spacing: 0.7px;
+            }
+            .container {
+                width: 1100px;
+            }
+        }
